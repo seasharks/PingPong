@@ -48,6 +48,8 @@
             this.general_rank_03 = new System.Windows.Forms.PictureBox();
             this.general_rank_02 = new System.Windows.Forms.PictureBox();
             this.general_rank_01 = new System.Windows.Forms.PictureBox();
+            this.background_picture = new System.Windows.Forms.PictureBox();
+            this.background_gameover = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.racket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grenade)).BeginInit();
             this.background.SuspendLayout();
@@ -57,6 +59,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.general_rank_03)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.general_rank_02)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.general_rank_01)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.background_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.background_gameover)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -203,6 +207,8 @@
             this.background.Controls.Add(this.scor_lbl);
             this.background.Controls.Add(this.grenade);
             this.background.Controls.Add(this.racket);
+            this.background.Controls.Add(this.background_picture);
+            this.background.Controls.Add(this.background_gameover);
             this.background.Dock = System.Windows.Forms.DockStyle.Fill;
             this.background.ForeColor = System.Drawing.Color.Black;
             this.background.Location = new System.Drawing.Point(0, 0);
@@ -214,7 +220,7 @@
             // 
             this.pause_img.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pause_img.Image = ((System.Drawing.Image)(resources.GetObject("pause_img.Image")));
-            this.pause_img.Location = new System.Drawing.Point(346, 137);
+            this.pause_img.Location = new System.Drawing.Point(349, 159);
             this.pause_img.Name = "pause_img";
             this.pause_img.Size = new System.Drawing.Size(84, 162);
             this.pause_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -276,6 +282,34 @@
             this.general_rank_01.TabIndex = 10;
             this.general_rank_01.TabStop = false;
             // 
+            // background_picture
+            // 
+            this.background_picture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.background_picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.background_picture.Image = ((System.Drawing.Image)(resources.GetObject("background_picture.Image")));
+            this.background_picture.Location = new System.Drawing.Point(1, 1);
+            this.background_picture.Name = "background_picture";
+            this.background_picture.Size = new System.Drawing.Size(766, 507);
+            this.background_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.background_picture.TabIndex = 16;
+            this.background_picture.TabStop = false;
+            // 
+            // background_gameover
+            // 
+            this.background_gameover.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.background_gameover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.background_gameover.Image = ((System.Drawing.Image)(resources.GetObject("background_gameover.Image")));
+            this.background_gameover.Location = new System.Drawing.Point(1, 1);
+            this.background_gameover.Name = "background_gameover";
+            this.background_gameover.Size = new System.Drawing.Size(766, 507);
+            this.background_gameover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.background_gameover.TabIndex = 18;
+            this.background_gameover.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,6 +329,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.general_rank_03)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.general_rank_02)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.general_rank_01)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.background_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.background_gameover)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,6 +355,8 @@
         private System.Windows.Forms.PictureBox general_rank_03;
         private System.Windows.Forms.PictureBox general_rank_02;
         private System.Windows.Forms.PictureBox pause_img;
+        private System.Windows.Forms.PictureBox background_picture;
+        private System.Windows.Forms.PictureBox background_gameover;
     }
 }
 

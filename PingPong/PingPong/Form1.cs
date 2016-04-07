@@ -37,6 +37,8 @@ namespace PingPong
             general_rank_04.Visible = false;
             general_rank_05.Visible = false;
             pause_img.Visible = false;
+            background_picture.Visible = true;
+            background_gameover.Visible = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -61,23 +63,23 @@ namespace PingPong
                     level_number += 1;
                     level_counter.Text = level_number.ToString();
 
-                    if (level_number == 1)
+                    if (level_number == 10)
                     {
                         general_rank_01.Visible = true;
                     }
-                    if (level_number == 2)
+                    if (level_number == 20)
                     {
                         general_rank_02.Visible = true;
                     }
-                    if (level_number == 3)
+                    if (level_number == 30)
                     {
                         general_rank_03.Visible = true;
                     }
-                    if (level_number == 4)
+                    if (level_number == 40)
                     {
                         general_rank_04.Visible = true;
                     }
-                    if (level_number == 5)
+                    if (level_number == 50)
                     {
                         general_rank_05.Visible = true;
                     }
@@ -105,7 +107,9 @@ namespace PingPong
             if (grenade.Bottom >= background.Bottom)
             {
                 timer1.Enabled = false; //stop the game when ball is out
-                gameover_lbl.Text = gameover_lbl.Text + @"\n\nYour final score is: " + points_lbl.Text;
+                gameover_lbl.Text = gameover_lbl.Text + "\nYour final score is: " + points_lbl.Text;
+                background_picture.Visible = false;
+                background_gameover.Visible = true;
                 gameover_lbl.Visible = true;
             }
 
