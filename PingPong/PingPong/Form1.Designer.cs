@@ -33,10 +33,10 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.racket = new System.Windows.Forms.PictureBox();
             this.grenade = new System.Windows.Forms.PictureBox();
-            this.scor_lbl = new System.Windows.Forms.Label();
-            this.points_lbl = new System.Windows.Forms.Label();
-            this.gameover_lbl = new System.Windows.Forms.Label();
-            this.pause_info = new System.Windows.Forms.Label();
+            this.score_label = new System.Windows.Forms.Label();
+            this.points_label = new System.Windows.Forms.Label();
+            this.gameover_label = new System.Windows.Forms.Label();
+            this.instructions_label = new System.Windows.Forms.Label();
             this.level_of_game = new System.Windows.Forms.Label();
             this.level_counter = new System.Windows.Forms.Label();
             this.experience_bar = new System.Windows.Forms.ProgressBar();
@@ -72,7 +72,7 @@
             // 
             this.racket.BackColor = System.Drawing.Color.Transparent;
             this.racket.Image = ((System.Drawing.Image)(resources.GetObject("racket.Image")));
-            this.racket.Location = new System.Drawing.Point(286, 429);
+            this.racket.Location = new System.Drawing.Point(349, 425);
             this.racket.Name = "racket";
             this.racket.Size = new System.Drawing.Size(200, 20);
             this.racket.TabIndex = 0;
@@ -90,63 +90,68 @@
             this.grenade.TabIndex = 1;
             this.grenade.TabStop = false;
             // 
-            // scor_lbl
+            // score_label
             // 
-            this.scor_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.scor_lbl.AutoSize = true;
-            this.scor_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.scor_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scor_lbl.Location = new System.Drawing.Point(629, 9);
-            this.scor_lbl.Name = "scor_lbl";
-            this.scor_lbl.Size = new System.Drawing.Size(80, 25);
-            this.scor_lbl.TabIndex = 2;
-            this.scor_lbl.Text = "Score: ";
+            this.score_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.score_label.AutoSize = true;
+            this.score_label.BackColor = System.Drawing.Color.Transparent;
+            this.score_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.score_label.ForeColor = System.Drawing.Color.White;
+            this.score_label.Location = new System.Drawing.Point(629, 9);
+            this.score_label.Name = "score_label";
+            this.score_label.Size = new System.Drawing.Size(87, 25);
+            this.score_label.TabIndex = 2;
+            this.score_label.Text = "Score: ";
             // 
-            // points_lbl
+            // points_label
             // 
-            this.points_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.points_lbl.AutoSize = true;
-            this.points_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.points_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.points_lbl.Location = new System.Drawing.Point(729, 9);
-            this.points_lbl.Name = "points_lbl";
-            this.points_lbl.Size = new System.Drawing.Size(25, 25);
-            this.points_lbl.TabIndex = 3;
-            this.points_lbl.Text = "0";
+            this.points_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.points_label.AutoSize = true;
+            this.points_label.BackColor = System.Drawing.Color.Transparent;
+            this.points_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.points_label.ForeColor = System.Drawing.Color.White;
+            this.points_label.Location = new System.Drawing.Point(729, 9);
+            this.points_label.Name = "points_label";
+            this.points_label.Size = new System.Drawing.Size(25, 25);
+            this.points_label.TabIndex = 3;
+            this.points_label.Text = "0";
             // 
-            // gameover_lbl
+            // gameover_label
             // 
-            this.gameover_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gameover_lbl.AutoSize = true;
-            this.gameover_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.gameover_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameover_lbl.Location = new System.Drawing.Point(292, 206);
-            this.gameover_lbl.Name = "gameover_lbl";
-            this.gameover_lbl.Size = new System.Drawing.Size(179, 50);
-            this.gameover_lbl.TabIndex = 4;
-            this.gameover_lbl.Text = "   YOU LOOSE !\r\nPress Esc to exit!\r\n";
+            this.gameover_label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gameover_label.AutoSize = true;
+            this.gameover_label.BackColor = System.Drawing.Color.Transparent;
+            this.gameover_label.Font = new System.Drawing.Font("Impact", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gameover_label.ForeColor = System.Drawing.Color.Red;
+            this.gameover_label.Location = new System.Drawing.Point(106, 156);
+            this.gameover_label.Name = "gameover_label";
+            this.gameover_label.Size = new System.Drawing.Size(526, 160);
+            this.gameover_label.TabIndex = 4;
+            this.gameover_label.Text = "          YOU LOOSE !\r\n   Press Esc to exit!\r\n";
             // 
-            // pause_info
+            // instructions_label
             // 
-            this.pause_info.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pause_info.AutoSize = true;
-            this.pause_info.BackColor = System.Drawing.Color.Transparent;
-            this.pause_info.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pause_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.pause_info.Location = new System.Drawing.Point(24, 415);
-            this.pause_info.Name = "pause_info";
-            this.pause_info.Size = new System.Drawing.Size(328, 52);
-            this.pause_info.TabIndex = 5;
-            this.pause_info.Text = "To pause the game press space!\r\nTo exit press escape!";
+            this.instructions_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.instructions_label.AutoSize = true;
+            this.instructions_label.BackColor = System.Drawing.Color.Transparent;
+            this.instructions_label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.instructions_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.instructions_label.ForeColor = System.Drawing.Color.White;
+            this.instructions_label.Location = new System.Drawing.Point(12, 448);
+            this.instructions_label.Name = "instructions_label";
+            this.instructions_label.Size = new System.Drawing.Size(358, 52);
+            this.instructions_label.TabIndex = 5;
+            this.instructions_label.Text = "To pause the game press space!\r\nTo exit press escape!";
             // 
             // level_of_game
             // 
             this.level_of_game.AutoSize = true;
             this.level_of_game.BackColor = System.Drawing.Color.Transparent;
-            this.level_of_game.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.level_of_game.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.level_of_game.ForeColor = System.Drawing.Color.White;
             this.level_of_game.Location = new System.Drawing.Point(12, 10);
             this.level_of_game.Name = "level_of_game";
-            this.level_of_game.Size = new System.Drawing.Size(70, 25);
+            this.level_of_game.Size = new System.Drawing.Size(76, 25);
             this.level_of_game.TabIndex = 6;
             this.level_of_game.Text = "Level:";
             // 
@@ -154,10 +159,11 @@
             // 
             this.level_counter.AutoSize = true;
             this.level_counter.BackColor = System.Drawing.Color.Transparent;
-            this.level_counter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.level_counter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.level_counter.ForeColor = System.Drawing.Color.White;
             this.level_counter.Location = new System.Drawing.Point(102, 11);
             this.level_counter.Name = "level_counter";
-            this.level_counter.Size = new System.Drawing.Size(24, 25);
+            this.level_counter.Size = new System.Drawing.Size(25, 25);
             this.level_counter.TabIndex = 7;
             this.level_counter.Text = "0";
             // 
@@ -177,10 +183,11 @@
             this.exp_bar_percent.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.exp_bar_percent.AutoSize = true;
             this.exp_bar_percent.BackColor = System.Drawing.Color.Transparent;
-            this.exp_bar_percent.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.exp_bar_percent.Location = new System.Drawing.Point(363, 14);
+            this.exp_bar_percent.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.exp_bar_percent.ForeColor = System.Drawing.Color.White;
+            this.exp_bar_percent.Location = new System.Drawing.Point(366, 37);
             this.exp_bar_percent.Name = "exp_bar_percent";
-            this.exp_bar_percent.Size = new System.Drawing.Size(33, 18);
+            this.exp_bar_percent.Size = new System.Drawing.Size(52, 25);
             this.exp_bar_percent.TabIndex = 9;
             this.exp_bar_percent.Text = "0 %";
             this.exp_bar_percent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -201,10 +208,10 @@
             this.background.Controls.Add(this.experience_bar);
             this.background.Controls.Add(this.level_counter);
             this.background.Controls.Add(this.level_of_game);
-            this.background.Controls.Add(this.pause_info);
-            this.background.Controls.Add(this.gameover_lbl);
-            this.background.Controls.Add(this.points_lbl);
-            this.background.Controls.Add(this.scor_lbl);
+            this.background.Controls.Add(this.instructions_label);
+            this.background.Controls.Add(this.gameover_label);
+            this.background.Controls.Add(this.points_label);
+            this.background.Controls.Add(this.score_label);
             this.background.Controls.Add(this.grenade);
             this.background.Controls.Add(this.racket);
             this.background.Controls.Add(this.background_picture);
@@ -220,9 +227,9 @@
             // 
             this.pause_img.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pause_img.Image = ((System.Drawing.Image)(resources.GetObject("pause_img.Image")));
-            this.pause_img.Location = new System.Drawing.Point(349, 159);
+            this.pause_img.Location = new System.Drawing.Point(332, 156);
             this.pause_img.Name = "pause_img";
-            this.pause_img.Size = new System.Drawing.Size(84, 162);
+            this.pause_img.Size = new System.Drawing.Size(122, 243);
             this.pause_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pause_img.TabIndex = 15;
             this.pause_img.TabStop = false;
@@ -231,7 +238,7 @@
             // 
             this.general_rank_05.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.general_rank_05.Image = ((System.Drawing.Image)(resources.GetObject("general_rank_05.Image")));
-            this.general_rank_05.Location = new System.Drawing.Point(703, 422);
+            this.general_rank_05.Location = new System.Drawing.Point(714, 455);
             this.general_rank_05.Name = "general_rank_05";
             this.general_rank_05.Size = new System.Drawing.Size(45, 45);
             this.general_rank_05.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -242,7 +249,7 @@
             // 
             this.general_rank_04.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.general_rank_04.Image = ((System.Drawing.Image)(resources.GetObject("general_rank_04.Image")));
-            this.general_rank_04.Location = new System.Drawing.Point(499, 422);
+            this.general_rank_04.Location = new System.Drawing.Point(510, 455);
             this.general_rank_04.Name = "general_rank_04";
             this.general_rank_04.Size = new System.Drawing.Size(45, 45);
             this.general_rank_04.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -253,7 +260,7 @@
             // 
             this.general_rank_03.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.general_rank_03.Image = ((System.Drawing.Image)(resources.GetObject("general_rank_03.Image")));
-            this.general_rank_03.Location = new System.Drawing.Point(652, 422);
+            this.general_rank_03.Location = new System.Drawing.Point(663, 455);
             this.general_rank_03.Name = "general_rank_03";
             this.general_rank_03.Size = new System.Drawing.Size(45, 45);
             this.general_rank_03.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -264,7 +271,7 @@
             // 
             this.general_rank_02.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.general_rank_02.Image = ((System.Drawing.Image)(resources.GetObject("general_rank_02.Image")));
-            this.general_rank_02.Location = new System.Drawing.Point(550, 422);
+            this.general_rank_02.Location = new System.Drawing.Point(561, 455);
             this.general_rank_02.Name = "general_rank_02";
             this.general_rank_02.Size = new System.Drawing.Size(45, 45);
             this.general_rank_02.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -275,7 +282,7 @@
             // 
             this.general_rank_01.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.general_rank_01.Image = ((System.Drawing.Image)(resources.GetObject("general_rank_01.Image")));
-            this.general_rank_01.Location = new System.Drawing.Point(601, 422);
+            this.general_rank_01.Location = new System.Drawing.Point(612, 455);
             this.general_rank_01.Name = "general_rank_01";
             this.general_rank_01.Size = new System.Drawing.Size(45, 45);
             this.general_rank_01.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -340,10 +347,10 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox racket;
         private System.Windows.Forms.PictureBox grenade;
-        private System.Windows.Forms.Label scor_lbl;
-        private System.Windows.Forms.Label points_lbl;
-        private System.Windows.Forms.Label gameover_lbl;
-        private System.Windows.Forms.Label pause_info;
+        private System.Windows.Forms.Label score_label;
+        private System.Windows.Forms.Label points_label;
+        private System.Windows.Forms.Label gameover_label;
+        private System.Windows.Forms.Label instructions_label;
         private System.Windows.Forms.Label level_of_game;
         private System.Windows.Forms.Label level_counter;
         private System.Windows.Forms.ProgressBar experience_bar;

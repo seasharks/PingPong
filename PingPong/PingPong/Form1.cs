@@ -28,9 +28,10 @@ namespace PingPong
             this.TopMost = true;  //bring the form to the front
             this.Bounds = Screen.PrimaryScreen.Bounds; //make it fullscreen
             racket.Top = background.Bottom - (background.Bottom / 10); //set the position of racket
-            gameover_lbl.Left = (background.Width / 2) - (gameover_lbl.Width / 2); //Position to center
-            gameover_lbl.Top = (background.Height / 2) - (gameover_lbl.Height / 2);
-            gameover_lbl.Visible = false; //hide
+            gameover_label.Left = (background.Width / 2) - (gameover_label.Width / 2); //Position to center
+            gameover_label.Top = (background.Height / 2) - (gameover_label.Height / 2);
+            gameover_label.Visible = false; //hide
+
             general_rank_01.Visible = false;
             general_rank_02.Visible = false;
             general_rank_03.Visible = false;
@@ -39,6 +40,49 @@ namespace PingPong
             pause_img.Visible = false;
             background_picture.Visible = true;
             background_gameover.Visible = false;
+
+            level_of_game.Parent = background_picture;
+            level_of_game.BackColor = Color.Transparent;
+
+            level_counter.Parent = background_picture;
+            level_counter.BackColor = Color.Transparent;
+            
+            score_label.Parent = background_picture;
+            score_label.BackColor = Color.Transparent;
+            
+            points_label.Parent = background_picture;
+            points_label.BackColor = Color.Transparent;
+
+            instructions_label.Parent = background_picture;
+            instructions_label.BackColor = Color.Transparent;
+
+            racket.Parent = background_picture;
+            racket.BackColor = Color.Transparent;
+
+            grenade.Parent = background_picture;
+            grenade.BackColor = Color.Transparent;
+
+            general_rank_01.Parent = background_picture;
+            general_rank_01.BackColor = Color.Transparent;
+
+            general_rank_02.Parent = background_picture;
+            general_rank_02.BackColor = Color.Transparent;
+
+            general_rank_03.Parent = background_picture;
+            general_rank_03.BackColor = Color.Transparent;
+
+            general_rank_04.Parent = background_picture;
+            general_rank_04.BackColor = Color.Transparent;
+
+            general_rank_05.Parent = background_picture;
+            general_rank_05.BackColor = Color.Transparent;
+
+            pause_img.Parent = background_picture;
+            pause_img.BackColor = Color.Transparent;
+
+            exp_bar_percent.Parent = background_picture;
+            exp_bar_percent.BackColor = Color.Transparent;
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -51,7 +95,7 @@ namespace PingPong
             {
                 speed_top = -speed_top;         //change Direction
                 points += 1;
-                points_lbl.Text = points.ToString();
+                points_label.Text = points.ToString();
 
                 experience_bar.Value += 20;
 
@@ -63,29 +107,29 @@ namespace PingPong
                     level_number += 1;
                     level_counter.Text = level_number.ToString();
 
-                    if (level_number == 10)
+                    if (level_number == 5)
                     {
                         general_rank_01.Visible = true;
                     }
-                    if (level_number == 20)
+                    if (level_number == 10)
                     {
                         general_rank_02.Visible = true;
                     }
-                    if (level_number == 30)
+                    if (level_number == 15)
                     {
                         general_rank_03.Visible = true;
                     }
-                    if (level_number == 40)
+                    if (level_number == 20)
                     {
                         general_rank_04.Visible = true;
                     }
-                    if (level_number == 50)
+                    if (level_number == 25)
                     {
                         general_rank_05.Visible = true;
                     }
                 }
 
-                exp_bar_percent.Text = experience_bar.Value + @" %";
+                exp_bar_percent.Text = experience_bar.Value + " %";
 
             }
 
@@ -107,10 +151,14 @@ namespace PingPong
             if (grenade.Bottom >= background.Bottom)
             {
                 timer1.Enabled = false; //stop the game when ball is out
-                gameover_lbl.Text = gameover_lbl.Text + "\nYour final score is: " + points_lbl.Text;
+                gameover_label.Text = gameover_label.Text + "\nYour final score is: " + points_label.Text;
+
                 background_picture.Visible = false;
                 background_gameover.Visible = true;
-                gameover_lbl.Visible = true;
+                gameover_label.Visible = true;
+
+                gameover_label.Parent = background_gameover;
+                gameover_label.BackColor = Color.Transparent;
             }
 
         }
@@ -126,7 +174,7 @@ namespace PingPong
                     timer1.Stop();
                     pause_img.Visible = true;
                 }
-                else if (isPaused && !gameover_lbl.Visible)
+                else if (isPaused && !gameover_label.Visible)
                 {
                     isPaused = false;
                     timer1.Start();
