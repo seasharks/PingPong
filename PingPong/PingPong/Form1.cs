@@ -41,8 +41,8 @@ namespace PingPong
 {
     public partial class Form1 : Form
     {
-        public int SpeedLeft = 10; //speed of the ball
-        public int SpeedTop = 10;
+        public int SpeedLeft = 5; //speed of the ball
+        public int SpeedTop = 5;
         public int Points = 0; //score Points
         public int LevelNumber = 1;
         public bool IsPaused = false;
@@ -124,28 +124,28 @@ namespace PingPong
                 if (experience_bar.Value == 100)
                 {
                     experience_bar.Value = 0;
-                    SpeedTop += 2;
-                    SpeedLeft += 2;
+                    SpeedTop -= 1;
+                    SpeedLeft -= 1;
                     LevelNumber += 1;
                     level_counter.Text = LevelNumber.ToString();
 
-                    if (LevelNumber == 5)
+                    if (LevelNumber == 2)
                     {
                         general_rank_01.Visible = true;
                     }
-                    if (LevelNumber == 10)
+                    if (LevelNumber == 4)
                     {
                         general_rank_02.Visible = true;
                     }
-                    if (LevelNumber == 15)
+                    if (LevelNumber == 6)
                     {
                         general_rank_03.Visible = true;
                     }
-                    if (LevelNumber == 20)
+                    if (LevelNumber == 8)
                     {
                         general_rank_04.Visible = true;
                     }
-                    if (LevelNumber == 25)
+                    if (LevelNumber == 10)
                     {
                         general_rank_05.Visible = true;
                     }

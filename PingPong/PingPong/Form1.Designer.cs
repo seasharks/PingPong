@@ -239,9 +239,9 @@
             // 
             this.general_rank_05.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.general_rank_05.Image = ((System.Drawing.Image)(resources.GetObject("general_rank_05.Image")));
-            this.general_rank_05.Location = new System.Drawing.Point(714, 455);
+            this.general_rank_05.Location = new System.Drawing.Point(703, 88);
             this.general_rank_05.Name = "general_rank_05";
-            this.general_rank_05.Size = new System.Drawing.Size(45, 45);
+            this.general_rank_05.Size = new System.Drawing.Size(60, 60);
             this.general_rank_05.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.general_rank_05.TabIndex = 14;
             this.general_rank_05.TabStop = false;
@@ -250,9 +250,9 @@
             // 
             this.general_rank_04.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.general_rank_04.Image = ((System.Drawing.Image)(resources.GetObject("general_rank_04.Image")));
-            this.general_rank_04.Location = new System.Drawing.Point(510, 455);
+            this.general_rank_04.Location = new System.Drawing.Point(703, 314);
             this.general_rank_04.Name = "general_rank_04";
-            this.general_rank_04.Size = new System.Drawing.Size(45, 45);
+            this.general_rank_04.Size = new System.Drawing.Size(60, 60);
             this.general_rank_04.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.general_rank_04.TabIndex = 13;
             this.general_rank_04.TabStop = false;
@@ -261,9 +261,9 @@
             // 
             this.general_rank_03.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.general_rank_03.Image = ((System.Drawing.Image)(resources.GetObject("general_rank_03.Image")));
-            this.general_rank_03.Location = new System.Drawing.Point(663, 455);
+            this.general_rank_03.Location = new System.Drawing.Point(703, 145);
             this.general_rank_03.Name = "general_rank_03";
-            this.general_rank_03.Size = new System.Drawing.Size(45, 45);
+            this.general_rank_03.Size = new System.Drawing.Size(60, 60);
             this.general_rank_03.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.general_rank_03.TabIndex = 12;
             this.general_rank_03.TabStop = false;
@@ -272,9 +272,9 @@
             // 
             this.general_rank_02.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.general_rank_02.Image = ((System.Drawing.Image)(resources.GetObject("general_rank_02.Image")));
-            this.general_rank_02.Location = new System.Drawing.Point(561, 455);
+            this.general_rank_02.Location = new System.Drawing.Point(703, 258);
             this.general_rank_02.Name = "general_rank_02";
-            this.general_rank_02.Size = new System.Drawing.Size(45, 45);
+            this.general_rank_02.Size = new System.Drawing.Size(60, 60);
             this.general_rank_02.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.general_rank_02.TabIndex = 11;
             this.general_rank_02.TabStop = false;
@@ -283,9 +283,9 @@
             // 
             this.general_rank_01.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.general_rank_01.Image = ((System.Drawing.Image)(resources.GetObject("general_rank_01.Image")));
-            this.general_rank_01.Location = new System.Drawing.Point(612, 455);
+            this.general_rank_01.Location = new System.Drawing.Point(703, 201);
             this.general_rank_01.Name = "general_rank_01";
-            this.general_rank_01.Size = new System.Drawing.Size(45, 45);
+            this.general_rank_01.Size = new System.Drawing.Size(60, 60);
             this.general_rank_01.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.general_rank_01.TabIndex = 10;
             this.general_rank_01.TabStop = false;
