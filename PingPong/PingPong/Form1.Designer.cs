@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.racket = new System.Windows.Forms.PictureBox();
             this.grenade = new System.Windows.Forms.PictureBox();
             this.score_label = new System.Windows.Forms.Label();
@@ -63,16 +63,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.background_gameover)).BeginInit();
             this.SuspendLayout();
             // 
-            // timer1
+            // timer
             // 
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer.Interval = 1;
+            this.timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // racket
             // 
+            this.racket.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.racket.BackColor = System.Drawing.Color.Transparent;
             this.racket.Image = ((System.Drawing.Image)(resources.GetObject("racket.Image")));
-            this.racket.Location = new System.Drawing.Point(349, 425);
+            this.racket.Location = new System.Drawing.Point(298, 425);
             this.racket.Name = "racket";
             this.racket.Size = new System.Drawing.Size(200, 20);
             this.racket.TabIndex = 0;
@@ -344,7 +345,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.PictureBox racket;
         private System.Windows.Forms.PictureBox grenade;
         private System.Windows.Forms.Label score_label;
